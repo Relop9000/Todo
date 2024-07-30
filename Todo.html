@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do</title>
+    <link rel="stylesheet" href="./Todo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app_header">
+      <div class="head">
+        <button id="taskButton">Add task</button>
+      </div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <h1>Enter task</h1>
+          <input
+            type="text"
+            id="addTaskText"
+            class="text"
+            placeholder="Task name..."
+          />
+          <select name="selectStatus" id="statusSelection" class="selection">
+            <option value="selectStatus">Select status</option>
+            <option value="todo" id="todoOption">To do</option>
+            <option value="inProgress" id="inProgressOption">
+              In Progress
+            </option>
+            <option value="done" id="doneOption">Done</option>
+            <option value="blocked" id="blockedOption">Blocked</option>
+          </select>
+          <input type="submit" id="submit" />
+        </div>
+      </div>
+    </div>
+    <div class="task_bar">
+      <!-- To do card -->
+      <div id="todoCard" class="card transparent board todo">
+        <div class="card_header transparent">
+          <div class="card_header_dot-text transparent">
+            <div class="card_header_todo_dot"></div>
+            <div class="card_header_text transparent">To do</div>
+          </div>
+          <div class="card_header_number transparent">5</div>
+        </div>
+        <div id="todo-tasks" class="task_container"></div>
+      </div>
+      <!-- In Progress card -->
+      <div id="inProgressCard" class="card transparent board">
+        <div class="card_header transparent">
+          <div class="card_header_dot-text transparent">
+            <div class="card_header_inprogress_dot"></div>
+            <div class="card_header_text transparent">In progress</div>
+          </div>
+          <div class="card_header_number transparent">5</div>
+        </div>
+        <div id="inProgress-tasks" class="task_container"></div>
+      </div>
+      <!-- Done card -->
+      <div id="doneCard" class="card transparent board">
+        <div class="card_header transparent">
+          <div class="card_header_dot-text transparent">
+            <div class="card_header_done_dot"></div>
+            <div class="card_header_text transparent">Done</div>
+          </div>
+          <div class="card_header_number transparent">5</div>
+        </div>
+        <div id="done-tasks" class="task_container"></div>
+      </div>
+      <!-- Blocked card -->
+      <div id="blockedCard" class="card transparent board">
+        <div class="card_header transparent">
+          <div class="card_header_dot-text transparent">
+            <div class="card_header_blocked_dot"></div>
+            <div class="card_header_text transparent">Blocked</div>
+          </div>
+          <div class="card_header_number transparent">5</div>
+        </div>
+        <div id="blocked-tasks" class="task_container"></div>
+      </div>
+    </div>
+  </body>
+  <script src="./Todo.js"></script>
+</html>
